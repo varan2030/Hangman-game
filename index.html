@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hangman</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ranchers" rel="stylesheet">
+</head>
+<body background='assets/background1.jpg'>
+<div class="card bg-dark text-primary" style="font-family: 'Ranchers', cursive;">
+     <div class="card-img-overlay">
+        <h1 class="text-center" class="card-title">HANGMAN</h1>
+<br><br>
+<div class="container">
+ <div class="row">
+     <div class="col-sm-3">
+        <div class="container">
+           <div class="row">
+            Guesses left:
+            <h3 id='guessesLeft'></h3>
+            </div>
+            <br><br>
+            <div class="row">
+            Wins:
+            <h3 id='win'></h3>
+            </div>
+            <br><br>
+            <div class="row">
+            Losses:
+            <h3 id='lost'></h3>
+            </div>
+            <br><br>
+            <div class="row">
+            Guessed Letters:
+            <h3 id="guessedLetters"></h3>
+        </div>
+                        
+    </div>
+</div>
+<div class="col-sm-6">
+<br> <br> <br>
+<h1 class="text-center" class="card-text" "font-size: 80px"><span id="word"></span></h1>
+
+ </div>
+    <div class="col-sm-3">
+    Guessed sinsers:
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-12">
+          <div  id = 'image'></div>
+    </div>
+    </div>     
+    </div>
+    </div>
+    </div>
+    <h1 class="text-center" style="font-size: 100px" id="singer"></h1>
+         <div class="row">
+         <div class="container">
+            <div class="row">
+            <h1 class="text-center" style="font-size: 60px" id="message"></h1>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+<audio id = 'audio1' src="assets/Madonna1.mp3" >Madonna</audio>
+<audio id = 'audio2' src="assets/Eminem1.mp3" >Eminem</audio>
+<audio id = 'audio3' src="assets/Nirvana1.mp3" >Nirvana</audio>
+
+<!-- Optional JavaScript -->
+<script type="text/javascript" src='game.js'></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+</html>
