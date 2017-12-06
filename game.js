@@ -17,7 +17,7 @@ letter = event.key.toLowerCase();
 win(letter);
 }
 
-function Singer(name, image, music) {
+function Singer(name,  image, music) {
 this.name = name;
 this.image = image;
 this.music = music;
