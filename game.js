@@ -7,8 +7,10 @@ losses = 0;
 var singer1 = new Singer('Madonna', 'assets/madonna.jpg', '#audio1');
 var singer2 = new Singer('Eminem', 'assets/eminem.jpg', '#audio2');
 var singer3 = new Singer('Nirvana', 'assets/nirvana.jpg', '#audio3');
+var singer4 = new Singer('Roxette', 'assets/roxette.jpg', '#audio4');
+var singer5 = new Singer('Aerosmith', 'assets/aerosmith.jpg', '#audio5');
 
-var singer = [singer1, singer2, singer3];
+var singer = [singer1, singer2, singer3, singer4, singer5];
 
 newRound('Press any key to start the Game');
 
@@ -32,7 +34,6 @@ randomSinger = singer[Math.floor(Math.random() * singer.length)];
 
 var randomSingerName = randomSinger.name.toLowerCase(); 
 
-
 singerName = randomSingerName.split('');
 
 for (i = 0; i < singerName.length; i++) {
@@ -40,12 +41,6 @@ for (i = 0; i < singerName.length; i++) {
 }
 
 music = randomSinger.music;
-
-img = document.createElement('img');
-img.src = (randomSinger.image)
-console.log(randomSinger.image);
-src = document.getElementById('image');
-
 
 document.querySelector("#guessedLetters").innerHTML = '';
 document.querySelector("#guessesLeft").innerHTML = guessesLeft;
@@ -64,14 +59,13 @@ if (hiddenName.indexOf('_') === -1) {
     wins++;
     document.querySelector(music).play();
     document.querySelector('#singer').innerHTML = randomSinger.name;
-    src.appendChild(img);
+    document.getElementById("image").src = randomSinger.image;
     newRound('WIN!!!  Press any key to restart the Game');
-    console.log(music);
-       
+  
 }
 if (guessesLeft <= 0) {
     losses++; 
-    newRound('LOSE!!!\'  Press any key to restart the Game');
+    newRound('LOSE!!!  Press any key to restart the Game');
 }
 }
 
